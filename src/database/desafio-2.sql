@@ -17,6 +17,3 @@ VALUES
     ('u001', 'Maria', 'maria@email.com', '123456', '154236545', '11'),
     ('u002', 'João', 'j@email.com', '000000', '1542546844', '21'),
     ('u003', 'Ana', 'aninha@email.com', 'abc123', '114141412', '32');
-
-
-SELECT * FROM users;
