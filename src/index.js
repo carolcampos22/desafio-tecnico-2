@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import SignUp from "./controller/signUp.js" 
+import SignIn from './controller/signIn.js'
 
 dotenv.config()
 
@@ -15,4 +16,4 @@ app.listen(process.env.PORT || 3003, () => {
 })
 
 app.post("/signup", SignUp);
-
+app.post("/signin", SignIn);
