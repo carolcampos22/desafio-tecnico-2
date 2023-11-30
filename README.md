@@ -26,7 +26,6 @@ Armazenamento persistente dos dados do usuário utilizando banco de dados SQLite
      cd desafio-tecnico-2
    ```
 3. Crie um arquivo .env na raiz do projeto para armazenar variáveis de ambiente, como chaves secretas ou configurações específicas, confome exemplificado no arquivo .env.example.
-### Endpoints
 
 4. Execute o projeto:
    ```bash
@@ -34,6 +33,8 @@ Armazenamento persistente dos dados do usuário utilizando banco de dados SQLite
 
    ```
 5. Use ferramentas como Postman ou curl para testar os endpoints conforme descrito na seção "Endpoints"
+
+### Endpoints
 
 1.  Sign Up (Criação de Cadastro) (/signup)
 
