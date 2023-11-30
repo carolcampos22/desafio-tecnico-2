@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import SignUp from "./controller/signUp.js" 
 import SignIn from './controller/signIn.js'
+import FindUser from './controller/findUser.js'
 
 dotenv.config()
 
@@ -17,3 +18,4 @@ app.listen(process.env.PORT || 3003, () => {
 
 app.post("/signup", SignUp);
 app.post("/signin", SignIn);
+app.get("/profile", FindUser)

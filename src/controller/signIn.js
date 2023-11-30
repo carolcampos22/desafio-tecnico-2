@@ -1,6 +1,9 @@
 import {db} from "../database/knex.js"
-import jwt from 'jsonwebtoken'; // Para gerar tokens JWT
+import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const SignIn = async (req, res) => {
     try {
@@ -15,7 +18,7 @@ const SignIn = async (req, res) => {
         }
 
         // Gerar token JWT
-        const token = jwt.sign({ userId: user.id, email: user.email }, 'chave-secreta-do-jwt', { expiresIn: '1h' });
+        const token = jwt.sign({ userId: user.id, email: user.email }, process.env.JWT_KEY, { expiresIn: '30m' });
 
         // Atualizar informações do último login
         const currentTime = new Date().toISOString();

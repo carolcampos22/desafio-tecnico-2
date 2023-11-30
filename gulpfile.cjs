@@ -1,10 +1,9 @@
 const gulp = require('gulp');
 const jshint = require('gulp-jshint');
 
-gulp.task('lint', () => {
-  return gulp.src(['./src/**/*.js'])
+gulp.task('lint', function() {
+  return gulp.src(['./src/**/*.js', '!node_modules/**'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('default', gulp.series('lint'));
