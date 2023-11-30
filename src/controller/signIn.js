@@ -18,7 +18,7 @@ const SignIn = async (req, res) => {
         }
 
         // Gerar token JWT
-        const token = jwt.sign({ userId: user.id, email: user.email }, process.env.JWT_KEY, { expiresIn: '30m' });
+        const token = jwt.sign({ userId: user.id, email: user.email }, process.env.JWT_KEY, { expiresIn: process.env.JWT_EXPIRES_IN });
 
         // Atualizar informações do último login
         const currentTime = new Date().toISOString();

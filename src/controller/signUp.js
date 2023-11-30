@@ -10,7 +10,7 @@ const SignUp = async (req, res) => {
     try {
         const { nome, email, senha, telefones } = req.body;
         const userId = v4();
-        const token = jwt.sign({ userId, email }, process.env.JWT_KEY, { expiresIn: '30m' });
+        const token = jwt.sign({ userId, email }, process.env.JWT_KEY, { expiresIn: process.env.JWT_EXPIRES_IN });
 
         // Criptografia hash na senha
         const hashedPassword = bcrypt.hashSync(senha, 10);

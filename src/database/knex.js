@@ -1,9 +1,12 @@
 import knex from "knex";
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export const db = knex({
     client: "sqlite3",
     connection: {
-        filename: "./src/database/desafio-2.db", 
+        filename: process.env.DB_FILE_PATH, 
     },
     useNullAsDefault: true, 
     pool: {

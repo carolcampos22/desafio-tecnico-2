@@ -12,4 +12,3 @@ CREATE TABLE users (
     ultimo_login TEXT
 );
 
-SELECT * FROM users;
